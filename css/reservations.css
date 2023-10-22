@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: rgb(37, 40, 54);
+}
+
+.wrapper .sidebar{
+    background: rgb(37, 40, 54);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.wrapper .sidebar .profile{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .profile img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile h3{
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.wrapper .sidebar .profile p{
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid gray;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: white;
+    width: 30px;
+    display: inline-block;
+}
+.wrapper .sidebar ul li a:hover{
+    color: rgb(37, 40, 54);
+
+    background:  linear-gradient(to right,  rgb(233, 107, 105) , rgb(233, 147, 105));
+    border-right: 2px solid white;
+
+}
+.wrapper .sidebar ul li a.active{
+    color:  linear-gradient(to right,  rgb(233, 107, 105) , rgb(233, 147, 105));
+
+    background:  black;
+    border-right: 2px solid white;
+}
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color:white;
+}
+
+.wrapper .sidebar ul li a:hover .icon{
+    color: rgb(37, 40, 54);
+
+}
+.wrapper .sidebar ul li a.active .icon{
+    color: linear-gradient(to right,  rgb(233, 107, 105) , rgb(233, 147, 105));
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    background: linear-gradient(to right,  rgb(233, 107, 105) , rgb(233, 147, 105));
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+.wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover{
+    color: black;
+}
+
+body.active .wrapper .sidebar{
+    left: -225px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
